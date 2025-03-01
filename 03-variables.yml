@@ -1,0 +1,9 @@
+- name: demo on variables
+  hosts: all
+  vars:
+    URL: google.com
+  tasks:
+    - name: print url
+      ansible.builtin.debug:
+        msg: "URL = {{ URL }}"
+#        here in ansible variable access with 2 brackets in shell we access with $
